@@ -14,17 +14,21 @@ import com.openwebinars.filmapp.view.DetailFragment.Companion.EXTRA
 
 class NewFilmsFragment : Fragment() {
 
+    private var binding : NewFilmsFragment? = null
+    private val binding get() = binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_films, container, false)
+        binding = NewFilmsFragment.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        with(view.findViewById<RecyclerView>(R.id.recyclerNews)) {
+       with (binding.recyclerNews) {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             adapter = FilmsAdapter(FilmsProvider.get()) {
                 val intentDetail = Intent(context, DetailActivity::class.java)

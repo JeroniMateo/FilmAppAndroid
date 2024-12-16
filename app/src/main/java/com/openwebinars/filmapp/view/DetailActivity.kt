@@ -10,6 +10,9 @@ import com.openwebinars.filmapp.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
 
+    private var binding : NewFilmsFragment? = null
+    private val binding get() = binding!!
+
     private lateinit var binding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

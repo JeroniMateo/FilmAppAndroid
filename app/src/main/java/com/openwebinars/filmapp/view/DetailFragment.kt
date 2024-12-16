@@ -14,6 +14,9 @@ import com.openwebinars.filmapp.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
 
+    private var binding : NewFilmsFragment? = null
+    private val binding get() = binding!!
+
     companion object {
         const val EXTRA = "film"
         fun newInstance(
@@ -34,7 +37,7 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentDetailBinding.inflate(inflater, container, false)
+        binding = NewFilmsFragment.inflate(inflater,container,false)
         return binding.root
     }
 
