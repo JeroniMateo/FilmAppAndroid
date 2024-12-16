@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.openwebinars.filmapp.R
+import com.example.namespace.R
+import com.example.namespace.databinding.ItemFilmBinding
 import com.openwebinars.filmapp.data.Film
-import com.openwebinars.filmapp.databinding.ItemFilmBinding
 
 class FilmsAdapter(
     private val films: List<Film>,

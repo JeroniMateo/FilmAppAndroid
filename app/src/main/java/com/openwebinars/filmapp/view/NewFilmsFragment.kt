@@ -8,21 +8,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.namespace.databinding.FragmentNewFilmsBinding
 import com.openwebinars.filmapp.R
 import com.openwebinars.filmapp.data.FilmsProvider
 import com.openwebinars.filmapp.view.DetailFragment.Companion.EXTRA
 
 class NewFilmsFragment : Fragment() {
 
-    private var binding : NewFilmsFragment? = null
-    private val binding get() = binding!!
+    private var _binding : FragmentNewFilmsBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = NewFilmsFragment.inflate(inflater,container,false)
+        _binding = FragmentNewFilmsBinding.inflate(inflater,container,false)
         return binding.root
     }
 

@@ -3,15 +3,13 @@ package com.openwebinars.filmapp.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.openwebinars.filmapp.R
+import com.example.namespace.databinding.ActivityDetailBinding
+import com.example.namespace.R
 import com.openwebinars.filmapp.view.DetailFragment.Companion.EXTRA
 import com.openwebinars.filmapp.data.Film
-import com.openwebinars.filmapp.databinding.ActivityDetailBinding
+
 
 class DetailActivity : AppCompatActivity() {
-
-    private var binding : NewFilmsFragment? = null
-    private val binding get() = binding!!
 
     private lateinit var binding: ActivityDetailBinding
 

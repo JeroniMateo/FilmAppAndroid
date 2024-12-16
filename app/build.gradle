@@ -6,7 +6,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "34.0.0"
     namespace 'com.example.namespace'
     defaultConfig {
         applicationId "com.openwebinars.filmapp"

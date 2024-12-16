@@ -3,12 +3,12 @@ package com.openwebinars.filmapp.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.openwebinars.filmapp.R
+import com.example.namespace.R
+import com.example.namespace.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: MainActivity
+    private lateinit var binding: ActivityMainBinding
 
     private val newsFragment = NewFilmsFragment()
     private val favsFragment = FavsFragment()
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         setFragment(newsFragment)
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setViewBottomNavigationListener() {
-        binding.viewBottomNavegation.setOnItemSelectedListener {
+        binding.viewBottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.news -> setFragment(newsFragment)
                 R.id.favs -> setFragment(favsFragment)

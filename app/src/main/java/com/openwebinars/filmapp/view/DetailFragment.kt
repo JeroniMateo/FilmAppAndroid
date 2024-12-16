@@ -9,13 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.namespace.databinding.FragmentDetailBinding
 import com.openwebinars.filmapp.data.Film
-import com.openwebinars.filmapp.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
-
-    private var binding : NewFilmsFragment? = null
-    private val binding get() = binding!!
 
     companion object {
         const val EXTRA = "film"
@@ -37,7 +34,7 @@ class DetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = NewFilmsFragment.inflate(inflater,container,false)
+        _binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 

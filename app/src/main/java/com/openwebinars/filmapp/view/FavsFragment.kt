@@ -5,19 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.namespace.databinding.FragmentNewFilmsBinding
 import com.openwebinars.filmapp.R
 
 class FavsFragment : Fragment() {
 
-    private var binding : NewFilmsFragment? = null
-    private val binding get() = binding!!
+    private var _binding : FragmentNewFilmsBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = NewFilmsFragment.inflate(inflater,container,false)
+        _binding = FragmentNewFilmsBinding.inflate(inflater,container,false)
         return binding.root
     }
 
