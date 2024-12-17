@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.namespace.databinding.FragmentDetailBinding
 import com.openwebinars.filmapp.data.Film
+import com.openwebinars.filmapp.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
 

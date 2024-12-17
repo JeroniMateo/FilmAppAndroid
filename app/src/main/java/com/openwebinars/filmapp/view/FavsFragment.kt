@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.namespace.databinding.FragmentNewFilmsBinding
-import com.openwebinars.filmapp.R
+import com.openwebinars.filmapp.databinding.FragmentNewFilmsBinding
 
 class FavsFragment : Fragment() {
 

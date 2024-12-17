@@ -3,8 +3,8 @@ package com.openwebinars.filmapp.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.namespace.R
-import com.example.namespace.databinding.ActivityMainBinding
+import com.openwebinars.filmapp.R
+import com.openwebinars.filmapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
