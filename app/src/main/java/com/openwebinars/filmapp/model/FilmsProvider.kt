@@ -1,4 +1,4 @@
-package com.openwebinars.filmapp.data
+package com.openwebinars.filmapp.model
 
 object FilmsProvider {
     fun get() : List<Film> =

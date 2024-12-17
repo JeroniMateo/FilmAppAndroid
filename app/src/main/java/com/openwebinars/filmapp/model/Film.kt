@@ -1,4 +1,4 @@
-package com.openwebinars.filmapp.data
+package com.openwebinars.filmapp.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

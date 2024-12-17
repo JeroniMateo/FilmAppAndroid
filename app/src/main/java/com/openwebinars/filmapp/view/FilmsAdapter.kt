@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.openwebinars.filmapp.data.Film
+import com.openwebinars.filmapp.model.Film
 import com.openwebinars.filmapp.databinding.ItemFilmBinding
 import com.openwebinars.filmapp.R
 
