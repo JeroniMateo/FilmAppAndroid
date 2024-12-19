@@ -1,5 +1,8 @@
 package com.openwebinars.filmapp.model
 
 class NewsFilmsRepository {
-    fun get(): List<Film> = FilmsProvider.get()
+
+    private val api = FilmsService()
+
+    suspend fun get(): List<Film> = api.get()
 }

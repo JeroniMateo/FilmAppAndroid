@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.openwebinars.filmapp.model.FilmsProvider
 import com.openwebinars.filmapp.databinding.FragmentNewFilmsBinding
 import com.openwebinars.filmapp.view.DetailFragment.Companion.EXTRA
 import com.openwebinars.filmapp.viewmodel.NewsViewModel
@@ -42,6 +41,10 @@ class NewFilmsFragment : Fragment() {
                     startActivity(intentDetail)
                 }
             }
+        })
+        newsViewModel.isLoadingLifeData.observe(viewLifecycleOwner,{ isLoading ->
+            binding.pbLoading.isVisible = isLoading
+            binding.recyclerNews.isVisible = !isLoading
         })
     }
 }
